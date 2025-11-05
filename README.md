@@ -8,6 +8,7 @@
  - ANOVA (distance groups) and ANCOVA (ptratio + rm)
 
 **Report (HTML)**: `results/report.html`
+ | **Report (Markdown)**: `results/report.md`
 
 ### Files
 - `boston_housing_analysis.R`: Main analysis script
