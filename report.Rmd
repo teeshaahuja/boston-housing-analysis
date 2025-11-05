@@ -8,10 +8,10 @@
      number_sections: false
  ---
 
- ```{r setup, include=FALSE}
- knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
- library(tidyverse)
- ```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+```
 
  # Overview
 
@@ -37,21 +37,21 @@
 
  ## Correlation Heatmap
 
- ```{r fig-cor, out.width='70%'}
- knitr::include_graphics(file.path("figures", "correlation_heatmap.png"))
- ```
+```{r fig-cor, out.width='70%'}
+knitr::include_graphics(file.path("figures", "correlation_heatmap.png"))
+```
 
  ## Distance Group vs MEDV
 
- ```{r fig-box, out.width='70%'}
- knitr::include_graphics(file.path("figures", "boxplot_medv_by_dis_group.png"))
- ```
+```{r fig-box, out.width='70%'}
+knitr::include_graphics(file.path("figures", "boxplot_medv_by_dis_group.png"))
+```
 
  ## Elastic Net Top Coefficients
 
- ```{r fig-imp, out.width='70%'}
- knitr::include_graphics(file.path("figures", "elastic_net_top20_coefficients.png"))
- ```
+```{r fig-imp, out.width='70%'}
+knitr::include_graphics(file.path("figures", "elastic_net_top20_coefficients.png"))
+```
 
  # Interpretation
 
