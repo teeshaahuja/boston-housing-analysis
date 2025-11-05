@@ -46,7 +46,7 @@ results %>% arrange(RMSE)
 knitr::include_graphics(file.path("figures", "correlation_heatmap.png"))
 ```
 
-<img src="figures/correlation_heatmap.png" width="70%" />
+<img src="../figures/correlation_heatmap.png" width="70%" />
 
 \## Distance Group vs MEDV
 
@@ -54,7 +54,7 @@ knitr::include_graphics(file.path("figures", "correlation_heatmap.png"))
 knitr::include_graphics(file.path("figures", "boxplot_medv_by_dis_group.png"))
 ```
 
-<img src="figures/boxplot_medv_by_dis_group.png" width="70%" />
+<img src="../figures/boxplot_medv_by_dis_group.png" width="70%" />
 
 \## Elastic Net Top Coefficients
 
@@ -62,7 +62,7 @@ knitr::include_graphics(file.path("figures", "boxplot_medv_by_dis_group.png"))
 knitr::include_graphics(file.path("figures", "elastic_net_top20_coefficients.png"))
 ```
 
-<img src="figures/elastic_net_top20_coefficients.png" width="70%" />
+<img src="../figures/elastic_net_top20_coefficients.png" width="70%" />
 
 \# Interpretation
 
