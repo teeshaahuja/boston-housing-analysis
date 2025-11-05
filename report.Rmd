@@ -1,0 +1,66 @@
+ ---
+ title: "Boston Housing Analysis"
+ author: "Teesha Ahuja"
+ output:
+   html_document:
+     toc: true
+     toc_float: true
+     number_sections: false
+ ---
+
+ ```{r setup, include=FALSE}
+ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+ library(tidyverse)
+ ```
+
+ # Overview
+
+ This report summarizes an end-to-end analysis of the Boston housing dataset, including cleaning, exploratory data analysis, cross-validated modeling, diagnostics, and hypothesis testing.
+
+ # Data and Methods
+
+ - Dataset: `Boston.csv`
+ - Models: Linear Regression, Elastic Net (glmnet), Random Forest, GBM
+ - Validation: 5x3 repeated CV on training; final evaluation on hold-out test set
+ - Diagnostics: VIF, Breusch–Pagan, Shapiro–Wilk, Cook's distance
+ - Inference: ANOVA on distance groups; ANCOVA on `ptratio` and `rm`
+
+ # Key Results
+
+ ## Model Performance
+
+ ```{r results-table}
+ results_path <- file.path("results", "model_comparison_results.csv")
+ results <- read.csv(results_path)
+ results %>% arrange(RMSE)
+ ```
+
+ ## Correlation Heatmap
+
+ ```{r fig-cor, out.width='70%'}
+ knitr::include_graphics(file.path("figures", "correlation_heatmap.png"))
+ ```
+
+ ## Distance Group vs MEDV
+
+ ```{r fig-box, out.width='70%'}
+ knitr::include_graphics(file.path("figures", "boxplot_medv_by_dis_group.png"))
+ ```
+
+ ## Elastic Net Top Coefficients
+
+ ```{r fig-imp, out.width='70%'}
+ knitr::include_graphics(file.path("figures", "elastic_net_top20_coefficients.png"))
+ ```
+
+ # Interpretation
+
+ - Tree-based models (RF/GBM) achieve the lowest RMSE on the test set.
+ - Important features include `rm` (positive), `lstat` (negative), `dis`, `rad`, and `ptratio`.
+ - Linear model assumptions show heteroskedasticity and non-normal residuals; consider robust SEs or alternative models for inference.
+
+ # Reproducibility
+
+ - Session info saved to `results/sessionInfo.txt`.
+ - Random seed set for comparability.
+

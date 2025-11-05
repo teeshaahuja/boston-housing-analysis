@@ -1,0 +1,17 @@
+ # R project
+ .Rproj.user/
+ .Rhistory
+ .RData
+ .Ruserdata
+ .Renviron
+ Rplots.pdf
+
+ # macOS
+ .DS_Store
+
+# Keep generated results under version control for reproducibility
+# (comment these out if you prefer to ignore)
+# clean_boston.csv
+# results/model_comparison_results.csv
+# results/sessionInfo.txt
+
